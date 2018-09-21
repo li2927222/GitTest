@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+html,body,div,span,object,h1,h2,h3,h4,h5,h6,p,pre,a,abbr,address,big, 
+cite,code,del,em,img,small,strong,sub,sup,tt,var,b,i,dl,dt,dd,ol,ul,li
+, fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,footer,header,menu,nav,output,section,summary,time,audio,video,input{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "苹方","微软雅黑","宋体";
+	font-size: 0.2rem;
+    background-color: #f7f7f7;
+    color: #333;
+    box-sizing: border-box;
+}
+/*ul,li{
+    list-style: none;
+}*/
+img{
+    vertical-align: top;
+    border: 0;
+}
+a:link,a:visited{
+    color: #666;
+    text-decoration: none;
+}
+a:hover{
+    color: #3d85fe;
+}
+/*通用样式*/
+.clearfix:after{
+    content: ".";
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.wrapper {
+    width:6.9rem;
+    margin:0 auto;
+}
+.bk{
+    border:1px solid red;
+}

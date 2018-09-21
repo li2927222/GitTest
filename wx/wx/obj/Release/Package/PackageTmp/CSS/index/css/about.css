@@ -1,0 +1,29 @@
+﻿@charset "UTF-8";
+
+/*banner样式开始*/
+.banner img{ height:100%;width:100%;}
+/*banner样式结束*/
+/*标题公用样式开始*/
+.tit{text-align:center;padding-top:0.4rem;font-size:0.3rem;padding-bottom:0.3rem;}
+.tit p i{display:inline-block;height:0.03rem;width:0.72rem;background: #878787;vertical-align:middle;}
+.tit p i:first-child{margin-right:0.2rem;}
+.tit p i:nth-child(2){margin-left:0.2rem;}
+/*标题公用样式结束*/
+/*经营理念开始*/
+.philosophy .philosophy-cont p img{width:3.91rem;height:2.2rem;padding-bottom:0.3rem;}
+.philosophy .philosophy-cont p span{display:inline-block;width:2.6rem;padding-top:0.2rem;}
+/*经营理念结束*/
+/*企业成长开始*/
+.growth  img{width:100%;height: 100%;padding-bottom:0.3rem;}
+/*企业成长结束*/
+/*联系方式开始*/
+.way{padding-bottom:0.9rem;filter:alpha(opacity=50)}
+.way .way-cont{width:100%;color:#878787;padding:0.5rem;padding-top:1.8em;}
+/*联系方式结束*/
+/*底部信息样式开始*/
+footer{position:fixed;bottom:0;width:100%;background:#fff;}
+footer ul li{display:inline-block;width:32%;padding-top:0.1rem;text-align:center;}
+footer ul li .iconfont{font-size:0.7rem;}
+footer ul li:nth-child(4) a{color:#3d85fe;}
+footer ul li p{margin-bottom:0.1rem;}
+/*底部信息样式结束*/

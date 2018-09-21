@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\wxoppo</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="API/AddBankinfo.ashx">
+      <publishTime>08/17/2016 17:41:44</publishTime>
+    </File>
+    <File Include="API/GetUserBank.ashx">
+      <publishTime>09/01/2016 10:08:28</publishTime>
+    </File>
+    <File Include="API/RtcashEdit.ashx">
+      <publishTime>08/20/2016 11:21:06</publishTime>
+    </File>
+    <File Include="API/RtCashGiveup.ashx">
+      <publishTime>08/31/2016 10:57:46</publishTime>
+    </File>
+    <File Include="API/UpdtBank.ashx">
+      <publishTime>09/07/2016 18:50:17</publishTime>
+    </File>
+    <File Include="API/UploadPic.ashx">
+      <publishTime>08/29/2016 14:12:20</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>08/15/2016 17:16:22</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>08/15/2016 17:16:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>08/15/2016 17:16:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>08/15/2016 17:16:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>08/15/2016 17:16:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>08/15/2016 17:16:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>08/15/2016 17:16:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>08/15/2016 17:16:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>08/15/2016 17:16:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/17/2016 17:40:36</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>08/15/2016 17:16:16</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>08/17/2016 17:40:38</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>08/17/2016 17:40:38</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>08/17/2016 17:40:38</publishTime>
+    </File>
+    <File Include="bin/wx.dll">
+      <publishTime>09/14/2016 10:53:10</publishTime>
+    </File>
+    <File Include="CrytUtils/Readme.txt">
+      <publishTime>08/15/2016 17:25:02</publishTime>
+    </File>
+    <File Include="CSS/css/demos.css">
+      <publishTime>09/06/2016 16:56:38</publishTime>
+    </File>
+    <File Include="CSS/css/jquery-weui.css">
+      <publishTime>09/06/2016 17:06:55</publishTime>
+    </File>
+    <File Include="CSS/css/jquery-weui.min.css">
+      <publishTime>08/17/2016 09:43:46</publishTime>
+    </File>
+    <File Include="CSS/css/weui.css">
+      <publishTime>09/06/2016 17:00:16</publishTime>
+    </File>
+    <File Include="CSS/css/weui.min.css">
+      <publishTime>09/06/2016 17:00:16</publishTime>
+    </File>
+    <File Include="CSS/js/city-picker.js">
+      <publishTime>08/17/2016 09:43:46</publishTime>
+    </File>
+    <File Include="CSS/js/city-picker.min.js">
+      <publishTime>08/17/2016 09:43:46</publishTime>
+    </File>
+    <File Include="CSS/js/jquery-2.1.4.js">
+      <publishTime>09/06/2016 16:58:51</publishTime>
+    </File>
+    <File Include="CSS/js/jquery-weui.js">
+      <publishTime>08/30/2016 11:44:12</publishTime>
+    </File>
+    <File Include="CSS/js/jquery-weui.min.js">
+      <publishTime>08/17/2016 09:43:46</publishTime>
+    </File>
+    <File Include="CSS/js/swiper.js">
+      <publishTime>08/17/2016 09:43:46</publishTime>
+    </File>
+    <File Include="CSS/js/swiper.min.js">
+      <publishTime>08/17/2016 09:43:46</publishTime>
+    </File>
+    <File Include="CSS/lib/jquery-2.1.4.js">
+      <publishTime>08/19/2016 14:00:16</publishTime>
+    </File>
+    <File Include="CSS/lib/weui.css">
+      <publishTime>09/06/2016 17:00:20</publishTime>
+    </File>
+    <File Include="CSS/lib/weui.min.css">
+      <publishTime>09/06/2016 17:00:21</publishTime>
+    </File>
+    <File Include="CSS/lib/zepto.js">
+      <publishTime>08/17/2016 09:43:46</publishTime>
+    </File>
+    <File Include="image/admin01201608291649.jpg">
+      <publishTime>08/29/2016 17:57:58</publishTime>
+    </File>
+    <File Include="image/kh13851501509_1473210099868_1.jpg">
+      <publishTime>09/07/2016 09:09:51</publishTime>
+    </File>
+    <File Include="image/kh13851501509_1473210099868_2.jpg">
+      <publishTime>09/07/2016 09:09:51</publishTime>
+    </File>
+    <File Include="image/kh13851501509_1473210099868_3.jpg">
+      <publishTime>09/07/2016 09:09:51</publishTime>
+    </File>
+    <File Include="image/no_pic.jpg">
+      <publishTime>09/07/2016 11:01:13</publishTime>
+    </File>
+    <File Include="InterFace.ashx">
+      <publishTime>08/15/2016 17:17:36</publishTime>
+    </File>
+    <File Include="InterFace1.ashx">
+      <publishTime>09/12/2016 15:55:09</publishTime>
+    </File>
+    <File Include="Oauth2Process1.aspx">
+      <publishTime>08/15/2016 17:29:24</publishTime>
+    </File>
+    <File Include="Oauth2Process2.aspx">
+      <publishTime>08/15/2016 18:18:42</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/17/2016 17:40:38</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>09/14/2016 10:53:10</publishTime>
+    </File>
+    <File Include="scripts/ai.0.15.0-build58334.js">
+      <publishTime>08/15/2016 17:16:22</publishTime>
+    </File>
+    <File Include="scripts/ai.0.15.0-build58334.min.js">
+      <publishTime>08/15/2016 17:16:22</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/14/2016 10:20:36</publishTime>
+    </File>
+    <File Include="web/admin.aspx">
+      <publishTime>09/13/2016 14:24:49</publishTime>
+    </File>
+    <File Include="web/bank.aspx">
+      <publishTime>09/06/2016 17:33:42</publishTime>
+    </File>
+    <File Include="web/BankInfo.aspx">
+      <publishTime>09/08/2016 09:02:45</publishTime>
+    </File>
+    <File Include="web/BankinfoEdit.aspx">
+      <publishTime>09/06/2016 15:19:48</publishTime>
+    </File>
+    <File Include="web/deposit.aspx">
+      <publishTime>09/06/2016 11:51:15</publishTime>
+    </File>
+    <File Include="web/Error.aspx">
+      <publishTime>08/23/2016 10:14:58</publishTime>
+    </File>
+    <File Include="web/PayLineQuery.aspx">
+      <publishTime>09/07/2016 16:22:43</publishTime>
+    </File>
+    <File Include="web/PayM.aspx">
+      <publishTime>09/07/2016 15:45:07</publishTime>
+    </File>
+    <File Include="web/Readme.aspx">
+      <publishTime>09/13/2016 16:30:25</publishTime>
+    </File>
+    <File Include="web/RtCash.aspx">
+      <publishTime>09/12/2016 14:24:02</publishTime>
+    </File>
+    <File Include="web/RtCashQuery.aspx">
+      <publishTime>09/06/2016 10:56:17</publishTime>
+    </File>
+    <File Include="web/RtCashResult.aspx">
+      <publishTime>08/22/2016 15:01:52</publishTime>
+    </File>
+    <File Include="web/RtCash_detail.aspx">
+      <publishTime>09/02/2016 11:52:50</publishTime>
+    </File>
+    <File Include="web/RtLineQuery.aspx">
+      <publishTime>09/09/2016 11:17:18</publishTime>
+    </File>
+    <File Include="web/UpdateBank.aspx">
+      <publishTime>09/09/2016 10:56:57</publishTime>
+    </File>
+    <File Include="web/UserCredit.aspx">
+      <publishTime>08/31/2016 14:57:36</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

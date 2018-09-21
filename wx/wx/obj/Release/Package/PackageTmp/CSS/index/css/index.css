@@ -1,0 +1,77 @@
+﻿@charset "UTF-8";
+/*顶部信息*/
+header{width: 100%; height: 0.8rem;}
+header .logo img{width: 1.5rem; height: 0.72rem; vertical-align: top; margin-top: 0.04rem;margin-right: 0.22rem;} 
+header .search { width: 4.82rem; height:0.52rem; background: #d9d9d9; border-radius: 0.1rem; margin-top:0.14rem; } 
+header .search i{padding-left:0.3rem;font-size: 0.3rem!important;text-align:center;line-height:24px;}
+header .search label { background: transparent;border: none;font-size:0.28rem;}
+/*顶部信息*/
+/*banner样式*/
+.swiper-container img{ height:100%;width:100%;}
+/*banner样式*/
+/*标题公用样式开始*/
+.tit{text-align: center;width:2.6rem;border-top:0.03rem solid #8d8d8d;border-bottom:0.03rem solid #8d8d8d;margin:0 auto;margin-top:0.3rem;margin-bottom: 0.3rem;}
+/*标题公用样式结束*/
+
+/*产品分类样式开始*/
+.pro .content ul{float:left;}
+.pro .content ul  li{display:inline-block;}
+.pro .content ul  li a{color:#fff;}
+.pro .content .content1 .pro1{width: 2.22rem;height: 2rem;border-radius: 0.1rem; background:#cd6ae4;color: #fff;margin-bottom:0.2rem;text-align:center;}
+.pro .content .content1 .pro1 p{padding-top:0.36rem;}
+.pro .content .content1 .pro2{background:#347ed1;}
+.pro .content .content1 .pro3{background: #e27298;}
+.pro .content .content1 .pro4{background: #f74037;}
+.pro .content .content1 .pro5{background: #d2b503;}
+.pro .content .content1 .pro6{background: #ff712a;}
+.pro .content .content2{width:2.22rem;height:3.2rem;}
+.pro .content .content2 i{font-size: 0.7rem;}
+.pro .content .content2 .pro7{width: 2.22rem;height: 1.4rem;border-radius: 0.1rem; background:#2e9bf6;color: #fff;margin-bottom:0.2rem;}
+.pro .content .content2 .pro7 p{padding-top:0.16rem;}
+.pro .content .content2 .pro8{background: #fc6419;}
+.pro .content .content2 .pro9{background:#e071fa;}
+.pro .content .content3:nth-child(3){width: 2.22rem;height: 3rem;border-radius: 0.1rem;color: #fff;margin-bottom:0.2rem;background:#00aa40;margin:0 0.1rem;}
+.pro .content .content3:nth-child(3) p{color:#fff;padding-top:0.7rem;margin-bottom: 0.2rem;}
+.pro .content .content3:nth-child(3) i{color:#fff;}
+/*产品分类样式结束*/
+/*品牌优势样式开始*/
+.brand .advan ul li{display:inline-block;width: 1.8rem;text-align:center;margin-bottom:0.4rem;margin-top:0.2rem;}
+.brand .advan .quality img{width:0.72rem;height:0.85rem;margin-bottom: 0.1rem;}
+.brand .advan .quality p{font-size:0.28rem;}
+.brand .advan .quality p span{text-align:left;display:inline-block;transform:scale(.8)!important;}
+/*品牌分类样式结束*/
+/*新闻中心样式开始*/
+.news .tab ul{margin-left:2rem;}
+.news .tab ul li{display:inline-block;width:1.6rem;height:0.48rem;text-align:center;line-height:0.48rem;background: #b0b0b0;font-size:0.28rem;}
+.news .tab  li a{color:black;}
+.news .tab  .tab1 {background:#548903;color:#fff;}
+.news .cont{position:relative;height:5rem;}
+.news  .cont .news1{position:absolute;top:0;left:0;height:5rem;display:block;}
+.news .cont .news1 .news-tit{width:7.5rem;height:2.51rem;margin-top:0.36rem;background:url(../images/news-bg.png) no-repeat;background-size: 7.5rem 2.51rem;}
+.news .cont .news1 .news-tit p{width:2.6rem;margin-top:0.16rem;margin-right:0.24rem;}
+.news .cont .news1 .news-tit .btn{width:2.1rem;height:0.4rem;border-radius:0.1rem;margin-top: 1.6rem;margin-left:1.4rem;background:#ff712a;}
+.news .cont .news1 .news-tit .btn a{color:#fff;}
+.news .cont .news1  .msg .news-detail{margin-top:0.2rem;font-size:0.28rem;}
+.news  .news1  .msg .news-detail i{display:inline-block;width:0.1rem;height: 0.1rem;border:0.05rem solid #ff712a;border-radius:0.1rem;}
+.news  .news1  .msg .news-detail span{display:inline-block;transform:scale(.8)!important;}
+.news  .cont .news2{position:absolute;top:0;left:0;height:5rem;display: none;}
+.news2 .msg img{width:7.5rem;margin-top:0.36rem;}
+.news .cont .news2  .msg .news-detail{margin-top:0.2rem;font-size:0.28rem;margin-left:0.3rem;}
+.news  .news2  .msg .news-detail i{display:inline-block;width:0.1rem;height: 0.1rem;border:0.05rem solid #ff712a;border-radius:0.1rem;}
+.news  .news2  .msg .news-detail span{display:inline-block;transform:scale(.8)!important;}
+/*新闻中心样式结束*/
+/*关于我们样式开始*/
+.about{margin-top:0.4rem;height:6.8rem;}
+.about .about-cont{width:100%;height:3.69rem;}
+.about .about-cont{margin-top:0.2rem;background:url(../images/aboutus-bg.png) no-repeat center center;background-size: 7.5rem 3.69rem;padding-top:0.6rem;color:#fff;font-size:0.28rem;}
+.about .about-cont p{margin-bottom:0.16rem;}
+.about .about-cont .btn{width:2.1rem;height:0.4rem;border-radius:0.1rem;margin-left:5rem;background:#ff712a;margin-bottom: 0.2rem;}
+.about .about-cont .btn a{color:#fff;}
+/*关于我们样式结束*/
+/*底部信息样式开始*/
+footer{position:fixed;bottom:0;width:100%;background:#fff;}
+footer ul li{display:inline-block;width:32%;padding-top:0.1rem;text-align:center;}
+footer ul li .iconfont{font-size:0.7rem;}
+footer ul li:first-child a{color:#3d85fe;}
+footer ul li p{margin-bottom:0.1rem;}
+/*底部信息样式结束*/

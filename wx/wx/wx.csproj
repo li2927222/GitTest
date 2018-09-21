@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{502FE569-EB4D-4087-AC19-721BAEB2C370}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wx</RootNamespace>
+    <AssemblyName>wx</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\css\bootstrap-theme.css" />
+    <Content Include="CSS\css\bootstrap-theme.min.css" />
+    <Content Include="CSS\css\bootstrap.css" />
+    <Content Include="CSS\css\bootstrap.min.css" />
+    <Content Include="CSS\css\bus.css" />
+    <Content Include="CSS\css\demos.css" />
+    <Content Include="CSS\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="CSS\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="CSS\css\index.css" />
+    <Content Include="CSS\css\jquery-weui.css" />
+    <Content Include="CSS\css\jquery-weui.min.css" />
+    <Content Include="CSS\css\jquery.bdt.css" />
+    <Content Include="CSS\css\jquery.bdt.min.css" />
+    <Content Include="CSS\css\style.css" />
+    <Content Include="CSS\css\swiper.min.css" />
+    <Content Include="CSS\css\unicorn.main.css" />
+    <Content Include="CSS\css\vendor\bootstrap-theme.css" />
+    <Content Include="CSS\css\vendor\bootstrap-theme.min.css" />
+    <Content Include="CSS\css\vendor\bootstrap.css" />
+    <Content Include="CSS\css\vendor\bootstrap.min.css" />
+    <Content Include="CSS\css\vendor\font-awesome.css" />
+    <Content Include="CSS\css\vendor\font-awesome.min.css" />
+    <Content Include="CSS\css\weui.css" />
+    <Content Include="CSS\css\weui.min.css" />
+    <Content Include="CSS\index\css\about.css" />
+    <Content Include="CSS\index\css\base.css" />
+    <Content Include="CSS\index\css\base1.css" />
+    <Content Include="CSS\index\css\common.css" />
+    <Content Include="CSS\index\css\font-awesome.min.css" />
+    <Content Include="CSS\index\css\font.css" />
+    <Content Include="CSS\index\css\index.css" />
+    <Content Include="CSS\index\css\loaders.min.css" />
+    <Content Include="CSS\index\css\personal.css" />
+    <Content Include="CSS\index\css\reset.css" />
+    <Content Include="CSS\index\css\style.css" />
+    <Content Include="CSS\index\css\style1.css" />
+    <Content Include="CSS\index\css\swiper.css" />
+    <Content Include="CSS\index\images\about2.jpg" />
+    <Content Include="CSS\index\images\banner1.jpg" />
+    <Content Include="CSS\index\images\banner2.jpg" />
+    <Content Include="CSS\index\images\banner3.jpg" />
+    <Content Include="CSS\index\images\banner4.jpg" />
+    <Content Include="CSS\index\images\banner4.png" />
+    <Content Include="CSS\index\images\check.png" />
+    <Content Include="CSS\index\images\checkbox_01.gif" />
+    <Content Include="CSS\index\images\checke.png" />
+    <Content Include="CSS\index\images\left.png" />
+    <Content Include="CSS\index\images\order-icon01.png" />
+    <Content Include="CSS\index\images\order-icon02.png" />
+    <Content Include="CSS\index\images\order-icon03.png" />
+    <Content Include="CSS\index\images\order-icon04.png" />
+    <Content Include="CSS\index\images\vivo1.jpg" />
+    <Content Include="CSS\index\images\vivo.png" />
+    <Content Include="CSS\index\js\area.js" />
+    <Content Include="CSS\index\js\bankinfo.js" />
+    <Content Include="CSS\index\js\common.js" />
+    <Content Include="CSS\index\js\index.js" />
+    <Content Include="CSS\index\js\jquery-1.9.1.min.js" />
+    <Content Include="CSS\index\js\jquery.gcjs.js" />
+    <Content Include="CSS\index\js\swiper.js" />
+    <Content Include="CSS\index\js\watermark.js" />
+    <Content Include="CSS\js\Adaptive.js" />
+    <Content Include="CSS\js\bootstrap-treeview.js" />
+    <Content Include="CSS\js\bootstrap-treeview.min.js" />
+    <Content Include="CSS\js\bootstrap.js" />
+    <Content Include="CSS\js\bootstrap.min.js" />
+    <Content Include="CSS\js\city-picker.js" />
+    <Content Include="CSS\js\city-picker.min.js" />
+    <Content Include="CSS\js\jquery-1.7.1.min.js" />
+    <Content Include="CSS\js\jquery-2.1.4.js" />
+    <Content Include="CSS\js\jquery-weui.js" />
+    <Content Include="CSS\js\jquery-weui.min.js" />
+    <Content Include="CSS\js\jquery.nav.js" />
+    <Content Include="CSS\js\navbar2.js" />
+    <Content Include="CSS\js\swiper.js" />
+    <Content Include="CSS\js\swiper.min.js" />
+    <Content Include="CSS\js\vendor\bootstrap.js" />
+    <Content Include="CSS\js\vendor\bootstrap.min.js" />
+    <Content Include="CSS\js\vendor\jquery.sortelements.js" />
+    <Content Include="CSS\js\waypoints.min.js" />
+    <Content Include="CSS\js\wxjdk.js" />
+    <Content Include="CSS\js\wxjsapi.js" />
+    <Content Include="CSS\js\zepto.min.js" />
+    <Content Include="CSS\lib\jquery-2.1.4.js" />
+    <Content Include="CSS\lib\weui.css" />
+    <Content Include="CSS\lib\weui.min.css" />
+    <Content Include="CSS\lib\zepto.js" />
+    <Content Include="JumpInterface.html" />
+    <Content Include="image\a.jpg" />
+    <Content Include="image\admin01201608291649.jpg" />
+    <Content Include="image\admin01201608298303.jpg" />
+    <Content Include="image\back.png" />
+    <Content Include="image\crm.jpg" />
+    <Content Include="image\delete.png" />
+    <Content Include="image\delete_down.png" />
+    <Content Include="image\delete_up.png" />
+    <Content Include="CSS\index\images\dian.png" />
+    <Content Include="image\kh13851501509_1473210099868_1.jpg" />
+    <Content Include="image\kh13851501509_1473210099868_2.jpg" />
+    <Content Include="image\kh13851501509_1473210099868_3.jpg" />
+    <Content Include="image\MyPicture.jpg" />
+    <Content Include="image\no_pic.jpg" />
+    <Content Include="image\ordcart.png" />
+    <Content Include="image\order.jpg" />
+    <Content Include="image\rtcash.jpg" />
+    <Content Include="image\weiyuan.jpg" />
+    <Content Include="image\duizhang.jpg" />
+    <Content Include="image\使用说明.jpg" />
+    <Content Include="image\南京威沃.png" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InterFace.ashx" />
+    <Content Include="API\RtcashEdit.ashx" />
+    <Content Include="API\UploadPic.ashx" />
+    <Content Include="API\RtCashGiveup.ashx" />
+    <Content Include="API\GetUserBank.ashx" />
+    <Content Include="Wb\About.aspx" />
+    <Content Include="Wb\AccQuery.aspx" />
+    <Content Include="Wb\AddrM.aspx" />
+    <Content Include="Wb\BankAccount.aspx" />
+    <Content Include="Wb\BankInfo.aspx" />
+    <Content Include="Wb\CheckAccList.aspx" />
+    <Content Include="Wb\CheckAccount.aspx" />
+    <Content Include="Wb\Cus_choise.aspx" />
+    <Content Include="Wb\Default.aspx" />
+    <Content Include="Wb\Deliveryaddr.aspx" />
+    <Content Include="Wb\OrderModeSelect.aspx" />
+    <Content Include="Wb\PersonInfo.aspx" />
+    <Content Include="Wb\RtCashInfo.aspx" />
+    <Content Include="Wb\ShipBill.aspx" />
+    <Content Include="Wb\WebForm1.aspx" />
+    <Content Include="Wb\zhquery.aspx" />
+    <Content Include="web\admin.aspx" />
+    <Content Include="web\Cur_Inventory.aspx" />
+    <Content Include="web\Cus_Manager.aspx" />
+    <Content Include="web\Detail_Report.aspx" />
+    <Content Include="web\Detail_Reports.aspx" />
+    <Content Include="web\Detail_Report_Cuschoise.aspx" />
+    <Content Include="web\DxOrdering.aspx" />
+    <Content Include="web\DxPreorder.aspx" />
+    <Content Include="web\EcOrderM.aspx" />
+    <Content Include="web\Error_Disconnect.aspx" />
+    <Content Include="web\OrderDetail.aspx" />
+    <Content Include="web\Ordering.aspx" />
+    <Content Include="web\OrderM.aspx" />
+    <Content Include="web\OrderRead.aspx" />
+    <Content Include="API\UpdtBank.ashx" />
+    <Content Include="API\Get_Cus_Order.ashx" />
+    <Content Include="API\Get_Cus_Stateinfo.ashx" />
+    <Content Include="API\Get_Order_Detail.ashx" />
+    <Content Include="API\GetCus.ashx" />
+    <Content Include="API\ClearPreorder.ashx" />
+    <Content Include="API\UpdatePreOrder.ashx" />
+    <Content Include="API\Updt_Cus_state.ashx" />
+    <Content Include="API\AddPreOrder.ashx" />
+    <Content Include="API\OrderSubmit.ashx" />
+    <Content Include="API\Rtcash_query.ashx" />
+    <Content Include="API\GetEcCus.ashx" />
+    <Content Include="API\DxOrderSubmit.ashx" />
+    <Content Include="API\RtCashEdit_s.ashx" />
+    <Content Include="API\Rtcash_detail.ashx" />
+    <Content Include="API\Get_Ar_detail.ashx" />
+    <Content Include="CSS\css\vendor\bootstrap-theme.css.map" />
+    <Content Include="CSS\css\vendor\bootstrap.css.map" />
+    <Content Include="CSS\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="CSS\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="CSS\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="CSS\css\fonts\FontAwesome.otf" />
+    <Content Include="CSS\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="CSS\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="CSS\css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="API\Get_Detail_Reports.ashx" />
+    <Content Include="CSS\index\fonts\iconfont.eot" />
+    <Content Include="CSS\index\fonts\iconfont.eot_#iefix" />
+    <Content Include="CSS\index\fonts\iconfont.svg#iconfont" />
+    <Content Include="CSS\index\fonts\iconfont.ttf" />
+    <Content Include="CSS\index\fonts\iconfont.woff" />
+    <Content Include="API\Get_Account.ashx" />
+    <Content Include="API\Get_Shipbill.ashx" />
+    <Content Include="API\Get_BankAcc.ashx" />
+    <Content Include="API\AddrManage.ashx" />
+    <Content Include="API\Get_Addrlist.ashx" />
+    <Content Include="API\Get_CheckAccount.ashx" />
+    <Content Include="API\Update_CheckAccount.ashx" />
+    <Content Include="API\Get_CheckList.ashx" />
+    <Content Include="API\BankManage.ashx" />
+    <Content Include="WW_verify_rihwmWd8e7OI0xOc.txt" />
+    <Content Include="API\Get_Auth.ashx" />
+    <None Include="Properties\PublishProfiles\sdjnvivo.pubxml" />
+    <None Include="Properties\PublishProfiles\wx.pubxml" />
+    <None Include="Properties\PublishProfiles\wxoppo.pubxml" />
+    <None Include="Properties\PublishProfiles\wxvivo.pubxml" />
+    <None Include="Properties\PublishProfiles\wxvivo_nj.pubxml" />
+    <Content Include="testmsg.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CrytUtils\Readme.txt" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Oauth2Process1.aspx" />
+    <Content Include="Oauth2Process2.aspx" />
+    <Content Include="web\Error.aspx" />
+    <Content Include="web\Preorder.aspx" />
+    <Content Include="web\Readme.aspx" />
+    <Content Include="web\RtCashQuery.aspx" />
+    <Content Include="web\RtCashResult.aspx" />
+    <Content Include="web\RtCash_detail.aspx" />
+    <Content Include="web\RtCash_s.aspx" />
+    <Content Include="web\RtLineQuery.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\AddPreOrder.ashx.cs">
+      <DependentUpon>AddPreOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\AddrManage.ashx.cs">
+      <DependentUpon>AddrManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\BankManage.ashx.cs">
+      <DependentUpon>BankManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\ClearPreorder.ashx.cs">
+      <DependentUpon>ClearPreorder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_Account.ashx.cs">
+      <DependentUpon>Get_Account.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_Addrlist.ashx.cs">
+      <DependentUpon>Get_Addrlist.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_Auth.ashx.cs">
+      <DependentUpon>Get_Auth.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_BankAcc.ashx.cs">
+      <DependentUpon>Get_BankAcc.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_CheckAccount.ashx.cs">
+      <DependentUpon>Get_CheckAccount.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_CheckList.ashx.cs">
+      <DependentUpon>Get_CheckList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_Detail_Reports.ashx.cs">
+      <DependentUpon>Get_Detail_Reports.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\DxOrderSubmit.ashx.cs">
+      <DependentUpon>DxOrderSubmit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\GetCus.ashx.cs">
+      <DependentUpon>GetCus.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\GetEcCus.ashx.cs">
+      <DependentUpon>GetEcCus.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\GetUserBank.ashx.cs">
+      <DependentUpon>GetUserBank.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_Ar_detail.ashx.cs">
+      <DependentUpon>Get_Ar_detail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_Cus_Order.ashx.cs">
+      <DependentUpon>Get_Cus_Order.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_Cus_Stateinfo.ashx.cs">
+      <DependentUpon>Get_Cus_Stateinfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_Order_Detail.ashx.cs">
+      <DependentUpon>Get_Order_Detail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Get_Shipbill.ashx.cs">
+      <DependentUpon>Get_Shipbill.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\OrderSubmit.ashx.cs">
+      <DependentUpon>OrderSubmit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\RtcashEdit.ashx.cs">
+      <DependentUpon>RtcashEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\RtCashGiveup.ashx.cs">
+      <DependentUpon>RtCashGiveup.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Rtcash_detail.ashx.cs">
+      <DependentUpon>Rtcash_detail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Rtcash_query.ashx.cs">
+      <DependentUpon>Rtcash_query.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\RtCashEdit_s.ashx.cs">
+      <DependentUpon>RtCashEdit_s.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\UpdatePreOrder.ashx.cs">
+      <DependentUpon>UpdatePreOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Update_CheckAccount.ashx.cs">
+      <DependentUpon>Update_CheckAccount.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\UpdtBank.ashx.cs">
+      <DependentUpon>UpdtBank.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\Updt_Cus_state.ashx.cs">
+      <DependentUpon>Updt_Cus_state.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="API\UploadPic.ashx.cs">
+      <DependentUpon>UploadPic.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CrytUtils\Common.cs" />
+    <Compile Include="CrytUtils\Cryptography.cs" />
+    <Compile Include="CrytUtils\Sample.cs" />
+    <Compile Include="CrytUtils\WXBizMsgCrypt.cs" />
+    <Compile Include="DAL\MenuMsgDal.cs" />
+    <Compile Include="InterFace.ashx.cs">
+      <DependentUpon>InterFace.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlUtils\KdApiSearch.cs" />
+    <Compile Include="SqlUtils\MSSQLHelper.cs" />
+    <Compile Include="testmsg.ashx.cs">
+      <DependentUpon>testmsg.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\FileLogger.cs" />
+    <Compile Include="Utils\WXMsgUtils.cs" />
+    <Compile Include="Oauth2Process1.aspx.cs">
+      <DependentUpon>Oauth2Process1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oauth2Process1.aspx.designer.cs">
+      <DependentUpon>Oauth2Process1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oauth2Process2.aspx.cs">
+      <DependentUpon>Oauth2Process2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oauth2Process2.aspx.designer.cs">
+      <DependentUpon>Oauth2Process2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\AccQuery.aspx.cs">
+      <DependentUpon>AccQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\AccQuery.aspx.designer.cs">
+      <DependentUpon>AccQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\AddrM.aspx.cs">
+      <DependentUpon>AddrM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\AddrM.aspx.designer.cs">
+      <DependentUpon>AddrM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\BankAccount.aspx.cs">
+      <DependentUpon>BankAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\BankAccount.aspx.designer.cs">
+      <DependentUpon>BankAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\BankInfo.aspx.cs">
+      <DependentUpon>BankInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\BankInfo.aspx.designer.cs">
+      <DependentUpon>BankInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\CheckAccList.aspx.cs">
+      <DependentUpon>CheckAccList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\CheckAccList.aspx.designer.cs">
+      <DependentUpon>CheckAccList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\CheckAccount.aspx.cs">
+      <DependentUpon>CheckAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\CheckAccount.aspx.designer.cs">
+      <DependentUpon>CheckAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\Cus_choise.aspx.cs">
+      <DependentUpon>Cus_choise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\Cus_choise.aspx.designer.cs">
+      <DependentUpon>Cus_choise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\Deliveryaddr.aspx.cs">
+      <DependentUpon>Deliveryaddr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\Deliveryaddr.aspx.designer.cs">
+      <DependentUpon>Deliveryaddr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\OrderModeSelect.aspx.cs">
+      <DependentUpon>OrderModeSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\OrderModeSelect.aspx.designer.cs">
+      <DependentUpon>OrderModeSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\PersonInfo.aspx.cs">
+      <DependentUpon>PersonInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\PersonInfo.aspx.designer.cs">
+      <DependentUpon>PersonInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\RtCashInfo.aspx.cs">
+      <DependentUpon>RtCashInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\RtCashInfo.aspx.designer.cs">
+      <DependentUpon>RtCashInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\ShipBill.aspx.cs">
+      <DependentUpon>ShipBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\ShipBill.aspx.designer.cs">
+      <DependentUpon>ShipBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wb\zhquery.aspx.cs">
+      <DependentUpon>zhquery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wb\zhquery.aspx.designer.cs">
+      <DependentUpon>zhquery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Cur_Inventory.aspx.cs">
+      <DependentUpon>Cur_Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Cur_Inventory.aspx.designer.cs">
+      <DependentUpon>Cur_Inventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Cus_Manager.aspx.cs">
+      <DependentUpon>Cus_Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Cus_Manager.aspx.designer.cs">
+      <DependentUpon>Cus_Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Detail_Report.aspx.cs">
+      <DependentUpon>Detail_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Detail_Report.aspx.designer.cs">
+      <DependentUpon>Detail_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Detail_Reports.aspx.cs">
+      <DependentUpon>Detail_Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Detail_Reports.aspx.designer.cs">
+      <DependentUpon>Detail_Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Detail_Report_Cuschoise.aspx.cs">
+      <DependentUpon>Detail_Report_Cuschoise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Detail_Report_Cuschoise.aspx.designer.cs">
+      <DependentUpon>Detail_Report_Cuschoise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\DxOrdering.aspx.cs">
+      <DependentUpon>DxOrdering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\DxOrdering.aspx.designer.cs">
+      <DependentUpon>DxOrdering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\DxPreorder.aspx.cs">
+      <DependentUpon>DxPreorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\DxPreorder.aspx.designer.cs">
+      <DependentUpon>DxPreorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\EcOrderM.aspx.cs">
+      <DependentUpon>EcOrderM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\EcOrderM.aspx.designer.cs">
+      <DependentUpon>EcOrderM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Error_Disconnect.aspx.cs">
+      <DependentUpon>Error_Disconnect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Error_Disconnect.aspx.designer.cs">
+      <DependentUpon>Error_Disconnect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\OrderDetail.aspx.designer.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Ordering.aspx.cs">
+      <DependentUpon>Ordering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Ordering.aspx.designer.cs">
+      <DependentUpon>Ordering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\OrderM.aspx.cs">
+      <DependentUpon>OrderM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\OrderM.aspx.designer.cs">
+      <DependentUpon>OrderM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\OrderRead.aspx.cs">
+      <DependentUpon>OrderRead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\OrderRead.aspx.designer.cs">
+      <DependentUpon>OrderRead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Preorder.aspx.cs">
+      <DependentUpon>Preorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Preorder.aspx.designer.cs">
+      <DependentUpon>Preorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Readme.aspx.cs">
+      <DependentUpon>Readme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Readme.aspx.designer.cs">
+      <DependentUpon>Readme.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\RtCashQuery.aspx.cs">
+      <DependentUpon>RtCashQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\RtCashQuery.aspx.designer.cs">
+      <DependentUpon>RtCashQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\RtCashResult.aspx.cs">
+      <DependentUpon>RtCashResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\RtCashResult.aspx.designer.cs">
+      <DependentUpon>RtCashResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\RtCash_detail.aspx.cs">
+      <DependentUpon>RtCash_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\RtCash_detail.aspx.designer.cs">
+      <DependentUpon>RtCash_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\RtCash_s.aspx.cs">
+      <DependentUpon>RtCash_s.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\RtCash_s.aspx.designer.cs">
+      <DependentUpon>RtCash_s.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\RtLineQuery.aspx.cs">
+      <DependentUpon>RtLineQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\RtLineQuery.aspx.designer.cs">
+      <DependentUpon>RtLineQuery.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3015</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3015/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
